@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的酷炫名片</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 400px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .title {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .contact {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        .contact:hover {
+            background: #45a049;
+        }
+        .hobby {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        .hobby:hover {
+            background: #e68900;
+        }
+        .secret {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f1f1;
+            border-radius: 10px;
+            display: none;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #ddd;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="avatar">😎</div>
+        <h1>Python 学习者</h1>
+        <div class="title">网页开发新手 | 未来的技术大神</div>
+        
+        <p>我正在学习编程，这是我的第一个酷炫网页！</p >
+        
+        <button class="contact" onclick="showContact()">联系我</button>
+        <button class="hobby" onclick="showHobby()">我的爱好</button>
+        
+        <div id="secretInfo" class="secret">
+            这里可以放你的联系方式或者更多信息！
+        </div>
+    </div>
+
+    <script>
+        function showContact() {
+            const info = document.getElementById('secretInfo');
+            info.innerHTML = '📧 邮箱: example@qq.com<br>📱 电话: 138-xxxx-xxxx';
+            info.style.display = 'block';
+        }
+        
+        function showHobby() {
+            const info = document.getElementById('secretInfo');
+            info.innerHTML = '🎮 玩游戏<br>💻 写代码<br>🎵 听音乐<br>🚗 开车兜风';
+            info.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
